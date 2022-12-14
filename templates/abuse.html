@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abuse Detection</title>
+</head>
+<body BGCOLOR="#FEF9E7">
+     <h1>Abuse Detection</h1>
+     <form action="/perform_abuse_detection" method="post">
+         <label>Type your text here</label><br><br>
+         <!--<textarea> It is similar to input, but its size is large-->
+         <textarea name="abuse_detection_text"></textarea><br><br>
+         <input type="submit" value="Perform Abuse Detection">
+     </form>
+
+     {% if response %}
+        {% for i in response: %}
+             <p>{{ i + ' --> ' + '{}'.format(response[i]) }}</p>
+        {% endfor %}
+     {% endif %}
+</body>
+</html>
