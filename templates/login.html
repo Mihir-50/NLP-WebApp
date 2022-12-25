@@ -7,10 +7,11 @@
     <title>NLP App | LogIn</title>
 </head>
 <!--body is the main section where we write whole code of our website-->
-<body BGCOLOR="#FEF9E7">
+<!--style is used to shift whole body at center-->
+<body BGCOLOR="#FEF9E7" style="text-align: center;">
      <!--give heading on login page use h1 tag-->
-     <h1>NLP Web App</h1>
-     <h3>Login Here</h3>
+     <h1 style="font-size: 50px;">NLP Web App</h1>
+     <h3 style="font-size: 25px;">Login Here</h3>
      <!--writing Python in HTML using Jinja Template-->
      {% if message %}
          <p style="color:green">{{ message }}</p>
@@ -19,16 +20,16 @@
      <form action="/perform_login" method="post">
          <!--<label> tag is used to put main lines in form-->
          <!--<br> tag is used to change line-->
-         <label>Email</label><br>
+         <label style="font-size: 20px;">Email</label><br>
          <!--<input> tag is used to take input from user-->
          <input type="email" name="user_email" required><br><br>
-         <label>Password</label><br>
+         <label style="font-size: 20px;">Password</label><br>
          <input type="password" name="user_password" required><br><br>
          <input type="submit" value="Login">
      </form>
      <!--<p> tab is used to write paragraph in login page-->
      <!--<a> tab is used to create link-->
      <!--'href' is used to tell where we have to go after clicking-->
-     <p>Not a member? <a href="/register">Register Here</a></p>
+     <p style="font-size: 20px;">Not a member? <a href="/register">Register Here</a></p>
 </body>
 </html>
